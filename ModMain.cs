@@ -14,11 +14,11 @@ namespace CVR.Lib.CoHTML {
 
     public override void OnApplicationStart() {
       Instance = this;
-      LoggerInstance.Msg("OnApplicationStart");
+      CoHTMLWrapper.OnApplicationStarted();
     }
 
     public override void OnPreSupportModule() {
-      LoggerInstance.Msg("OnPreSupportModule");
+      Helpers.CustomCoHTMLDirectory.EnsureDirectoryExists();
     }
   }
 }
